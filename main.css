@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    margin: 0px;
+}
+
+.top{
+    margin-top: 50px;
+}
+
+.top img{
+    height: 300px;
+    width: 220px;
+    border: 2px dashed;
+    box-shadow: 5px 5px 3px gray;
+}
+
+.bottom{
+    border-top: 2px solid;
+    margin-top:50px ;
+}
+
+.subject{
+    background-color: whitesmoke;
+    border-top: 2px solid ;
+    margin-top: 50px;
+}
