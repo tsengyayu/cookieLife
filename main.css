@@ -66,6 +66,11 @@ body p{
     margin-bottom: 50px;
 }
 
+.bottom-pic-1{
+    position: relative;
+    z-index: 10;
+}
+
 .bottom-bgcolor{
     background-color: burlywood;
     margin: 200px 200px;
