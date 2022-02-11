@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+}
+
+.btn{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 69px;
+    width: 100%;
+    background-color: burlywood; 
+}
+
+.login{
+    display: flex;
+    /* width: 100%;
+    height: calc(100% - 69px); */
+    /* justify-content: center; */
+}
+
+.login .left{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: calc(100% - 69px);
+    width: 40%;
+    /* background-color: blueviolet; */
+}
+
+.right img{
+    position: absolute;
+    right: 0px;
+    width: 60%;
+    height: clac(100%-69px);
+}
