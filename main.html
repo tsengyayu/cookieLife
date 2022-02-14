@@ -5,13 +5,13 @@
     </head>
     <body>
         <div class="btn">
-            <a style="margin-right: 40px; margin-left: 20px;" href="">
+            <a style="margin-right: 40px; margin-left: 20px;" href="main.html">
                 首頁
             </a>
-            <a style="margin-right: 40px;" href="">
+            <a style="margin-right: 40px;" href="login.html">
                 創建/登入
             </a>
-            <a style="margin-right: 40px;" href="">
+            <a style="margin-right: 40px;" href="diary.html">
                 生活日記
             </a>
             <a href="">  
@@ -31,13 +31,27 @@
                 <h2>特徵：脖子戴著白圍巾，腳上穿著白襪襪，每天只會憨笑</h2>
             </div>
             <div class="picture">
-                <div><img src="bottom-pic-1.jpeg"></div>
-                <div><img src="bottom-pic-2.jpeg"></div>
-                <div><img src="bottom-pic-3.jpeg"></div>
+                <div class="circle-test">
+                    <img id="pic1" src="bottom-pic-1.jpeg">
+                </div>
+                <div class="circle-test">
+                    <img id="pic2" src="bottom-pic-2.jpeg">
+                </div>
+                <div class="circle-test">
+                    <img id="pic3" src="bottom-pic-3.jpeg">
+                </div>
+
+
+                
             </div>
             <div class="picture">
-                <div><img src="bottom-pic-4.jpeg"></div>
-                <div><img src="bottom-pic-5.jpeg"></div>
+                <div class="circle-test">
+                    <img id="pic4" src="bottom-pic-4.jpeg">
+                </div>
+                <div class="circle-test">
+                    <img id="pic5" src="bottom-pic-5.jpeg">
+                </div>
+                
             </div>
             <div class="intro bottom-bgcolor" style="margin-top: 50px;"> 
                 <p>
@@ -80,5 +94,53 @@
                 <img style="margin-bottom: 50px;" src="ig-icon.png">
             </div>
         </div>
+        <script>
+            let circles = document.getElementsByClassName('circle-test');
+            for(var i=0; i<circles.length; i++){
+                console.log(i)
+                let c = circles[i];
+                 c.addEventListener('mousemove',(event)=>{   //addEventListerner監聽鼠標
+                    let rect = c.getBoundingClientRect();  //獲得圓的座標
+                    let relativeX = event.clientX - rect.left;
+                    let relativeY = event.clientY - rect.top;
+                    let diffX = relativeX - 110;
+                    let diffY = relativeY - 110;
+                    //console.log(diffX+':'+diffY);
+                    let pic = document.getElementById('pic1');
+                    let pic1 = document.getElementById('pic2')
+                    let pic2 = document.getElementById('pic3');
+                    let pic3 = document.getElementById('pic4');
+                    let pic4 = document.getElementById('pic5');
+                    if(pic){
+                        pic.style.top = (-diffY/10)+'px';
+                        pic.style.left = (-diffX/10)+'px';
+                    }
+                    if(pic1){
+                        pic1.style.top = (-diffY/10)+'px';
+                        pic1.style.left = (-diffX/10)+'px';
+                    }
+                    if(pic2){
+                        pic2.style.top = (-diffY/10)+'px';
+                        pic2.style.left = (-diffX/10)+'px';
+                    }
+                    if(pic3){
+                        pic3.style.top = (-diffY/10)+'px';
+                        pic3.style.left = (-diffX/10)+'px';
+                    }
+                    if(pic4){
+                        pic4.style.top = (-diffY/10)+'px';
+                        pic4.style.left = (-diffX/10)+'px';
+                    }
+
+
+                //    c.style.left = '50px';
+                    // c.setAttribute('top',(50)+'px');
+                    // c.setAttribute('left',(50)+'px');
+                    // c.setAttribute('top',(-diffY/20)+'px');
+                    // c.setAttribute('left',(-diffX/20)+'px');
+                });
+            }
+
+        </script>
     </body>
 </html>

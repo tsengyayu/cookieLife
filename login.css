@@ -13,6 +13,7 @@ body{
 
 .login{
     display: flex;
+    background-color: orange;
     /* width: 100%;
     height: calc(100% - 69px); */
     /* justify-content: center; */
@@ -30,9 +31,9 @@ body{
     /* background-color: blueviolet; */
 }
 
-.right img{
+.login .right {
     position: absolute;
     right: 0px;
     width: 60%;
-    height: clac(100%-69px);
+    height: calc(100%-69px);
 }

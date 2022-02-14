@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="login.css" rel="stylesheet">
+    </head>
+    <body style="background-color: blue;" id="test">
+        <div class="btn">
+            <a style="margin-right: 40px; margin-left: 20px;" href="main.html">
+                首頁
+            </a>
+            <a style="margin-right: 40px;" href="login.html">
+                創建/登入
+            </a>
+            <a style="margin-right: 40px;" href="diary.html">
+                生活日記
+            </a>
+            <a href="">
+                內容編輯
+            </a>
+        </div>
+        <div class="login">
+            <div class="left" style="background-color: aqua;">
+                <div>
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+            </div>
+            <div class="right" style="background-color: red;">
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+        <script>
+
+            var isCommentShow = true;
+            function openComments(){
+                if(!isCommentShow){
+                    isCommentShow = true;
+                    var left = document.getElementsByClassName("left")[0];
+                    left.style.display = "block";
+                }
+            }
+            
+            function hideComments(){
+                if(isCommentShow){
+                    isCommentShow = false;
+                    var left = document.getElementsByClassName("left")[0];
+                    left.style.display = "none";
+                }   
+            }
+
+            function triggerClick(){
+                console.log('click');
+                if(isCommentShow){
+                    hideComments();
+                }else{
+                    openComments();
+                }
+            }
+            hideComments();
+           
+            document.getElementsByClassName('btn')[0].addEventListener('click', triggerClick);
+            // hideComments();
+        </script>
+    </body>
+</html>

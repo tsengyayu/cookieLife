@@ -51,10 +51,21 @@ body p{
 }
 
 .picture img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
     border-radius: 99em;
     width: 200px;
     height: 200px;
+
     
+}
+.picture .circle-test{
+    position: relative;
+    border-radius: 99em;
+    width: 220px;
+    height: 220px;
+    background-color: orange;
 }
 .picture {
     display: flex;
